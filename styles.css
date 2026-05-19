@@ -520,7 +520,7 @@ ul { list-style: none; }
   flex-shrink: 0;
   line-height: 1;
 }
-.faq-item[open] summary::after { content: '&minus;'; }
+.faq-item[open] summary::after { content: '\2212'; }
 .faq-item[open] summary { color: var(--amber-dark); border-bottom: 1px solid var(--border); }
 .faq-answer {
   padding: 16px 22px 20px;
