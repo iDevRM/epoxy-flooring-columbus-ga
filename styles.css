@@ -197,7 +197,7 @@ ul { list-style: none; }
   font-weight: 500;
 }
 .hero-trust-item::before {
-  content: '&#10003;';
+  content: '\2713';
   color: var(--amber);
   font-weight: 900;
 }
@@ -748,7 +748,7 @@ ul { list-style: none; }
   line-height: 1.55;
 }
 .check-list li::before {
-  content: '&#10003;';
+  content: '\2713';
   color: var(--amber-dark);
   font-weight: 900;
   font-size: 14px;
