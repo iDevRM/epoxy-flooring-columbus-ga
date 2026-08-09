@@ -871,3 +871,51 @@ footer {
   .gallery-grid-row2 { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+
+/* ---------- SERVICES NAV DROPDOWN ---------- */
+.has-dropdown { position: relative; display: inline-flex; align-items: center; }
+.has-dropdown > a { display: inline-flex; align-items: center; gap: 6px; }
+.has-dropdown > a::after {
+  content: "";
+  width: 0; height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+}
+/* padding-top (not margin) keeps the gap inside the hoverable box */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  padding-top: 14px;
+  min-width: 270px;
+  z-index: 300;
+}
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu { display: block; }
+.dropdown-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background: var(--slate-900);
+  border: 1px solid rgba(255,255,255,.10);
+  border-top: 3px solid var(--amber);
+  box-shadow: var(--shadow-lg);
+}
+.dropdown-menu-list li + li { border-top: 1px solid rgba(255,255,255,.07); }
+.dropdown-menu-list a {
+  display: block;
+  padding: 11px 20px;
+  color: #cbd5e1;
+  font-size: .9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 0;
+}
+.dropdown-menu-list a:hover { background: var(--slate-800); color: #ffffff; }
+@media (max-width: 860px) {
+  .dropdown-menu { display: none !important; }
+  .has-dropdown > a::after { display: none; }
+}
